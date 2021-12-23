@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*REM -> Medida RELATIVA que toma como referencia la medida que trae el HTML. Si la medida de la fuente de un párrafo heredada de HTML es 16px, un rem entonces mide eso, 16px. Tip: Para facilitar el uso de la medida REM, podemos darle a HTML un font-size de 62.5%. Así 1rem equivaldrá a 10px facilitando nuestros cálculos.*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*ESTILOS GLOBALES*/
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  line-height: 1.5; /*Interlineado Modifica distancia entre líneas*/
+  font-size: 1.4rem;
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  margin: 0 0 5rem 0; /*Elimina todos los márgenes*/
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+
+img {
+  max-width: 100%; /*para responsive*/
+  display: block;
+}
+
+.btn {
+  background-color: #0a93e9;
+  border-bottom-right-radius: 5rem;
+  /*display: block;*/
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  box-shadow: 0.4rem 0.4rem 0rem #000000;
+  transition: background-color 0.4s ease-in-out;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #b6d6fa;
+  cursor: pointer;
+}
+
+/*UTILIDADES*/
+
+.text-center {
+  text-align: center;
+}
+
+.max-width-25 {
+  max-width: 25rem;
+}
+/*ESTILO HEADER*/
+
+.nombre-sitio {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.nombre-sitio span {
+  color: #388dee;
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto; /*para centrar*/
+}
+
+.contenedor-navegacion {
+  box-shadow: 0px 0px 5px 0px black;
+}
+
+.nav-principal {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+}
+.nav-principal a:hover {
+  color: #0e74e9;
+}
+
+.nav-principal a {
+  color: #e7a9e3;
+  font-size: 1.8rem;
+}
+
+.hero {
+  margin-top: 3rem;
+  background-image: url(images/principal.jpg); /*Coloca imagen de fondo*/
+  height: 45rem;
+  background-repeat: no-repeat;
+  background-position: center center; /*muestra la parte central de la imagen*/
+  background-size: cover;
+}
+/*Categorías
+.todas-categorias h2 {
+  text-align: center;
+}*/
+
+.todas-categorias {
+  padding-top: 5rem;
+}
+.categoria a {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #030303;
+  border-bottom-right-radius: 5rem;
+  background-color: #eaeef0;
+}
+
+.categoria a:hover {
+  background-color: #0d9ffb;
+  color: #e6f0f7;
+  border-bottom-right-radius: 5rem;
+}
+.listado-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+/**BLOQUE NOSOTROS*/
+/**Divide la sección nosotros en dos partes izquierda transparente y derecha azul y coloca imagen*/
+.sobre-nosotros {
+  margin-top: 5rem;
+  background-image: linear-gradient(
+      to right,
+      transparent 50%,
+      #0d9ffb 50%,
+      #0d9ffb 100%
+    ),
+    url(images/nosotros.jpg);
+  padding: 10rem 0;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem;
+}
+
+.sobre-nosotros-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+.texto-nosotros {
+  flex-basis: 50%;
+  padding-left: 10rem;
+  color: #e6f0f7;
+}
+
+/*LISTADO DE PRODUCTOS*/
+
+.listado-productos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.producto:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img {
+  height: 43rem;
+  width: 100%;
+  object-fit: cover;
+}
+.producto:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.producto:nth-child(2) img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.producto:nth-child(3) {
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+
+.producto:nth-child(3) img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+}
+.producto:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.producto:nth-child(5) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.producto:nth-child(6) {
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+.contenido-principal {
+  padding-top: 5rem;
+}
+
+.producto {
+  background-color: #0d9ffb;
+}
+
+.texto-producto {
+  text-align: center;
+  color: #e6f0f7;
+  padding: 5rem;
+}
+
+.texto-producto .precio {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #030303;
+}
+
+.texto-producto h3 {
+  margin: 0;
+  color: #000000;
+}
+
+.texto-producto p {
+  margin: 0 0 0.5rem 0;
+}
+
+/*FOOTER*/
+
+.site-footer {
+  border-top: 1px solid #7a7a79;
+  margin-top: 5rem;
+  padding-top: 5rem;
+}
+
+.site-footer h3 {
+  margin-bottom: 0.5rem;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-menu a {
+  display: block;
+}
+
+.footer-menu a:hover {
+  color: #0e74e9;
+}
+.copyright {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* SOBRE NOSOTROS*/
+
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 4rem;
+}
+
+.informacion-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/*BLOG*/
+
+.contenedor-blog {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 4rem;
+}
+.entrada {
+  border-bottom: 2px solid #35cdfb;
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+  border: none;
+}
+
+.entrada-meta {
+  display: flex;
+  justify-content: space-between;
+}
+.entrada-meta p {
+  font-weight: 600;
+}
+
+.entrada-meta span {
+  color: #0e74e9;
+}
+
+.contenido-entrada-blog {
+  width: 60rem;
+  margin: 0 auto;
+}
+/*GALERÍA*/
+
+.galeria {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.galeria img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+}
+
+/*FORMULARIO*/
+.formulario {
+  max-width: 60rem;
+  margin: 0 auto; /*para centrar formulario*/
+}
+
+.formulario fieldset {
+  border: 1px solid black;
+  margin-bottom: 2rem;
+}
+
+.formulario legend {
+  background-color: #0e74e9;
+  width: 100%;
+  text-align: center;
+  color: #eaeef0;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo label {
+  flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select {
+  flex: 1;
+  border: 1px solid cornflowerblue;
+  padding: 1rem;
+}
