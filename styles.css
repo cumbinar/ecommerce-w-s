@@ -20,10 +20,6 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 5rem;
-}
-
 h1,
 h2,
 h3 {
@@ -31,12 +27,35 @@ h3 {
   font-weight: normal;
   margin: 0 0 5rem 0; /*Elimina todos los márgenes*/
 }
+h1 {
+  font-size: 4rem;
+}
+/*cambia tamaño h1 para movil*/
+@media(min-width: 768px){
+  h1 {
+    font-size: 5rem;
+  }
 
+}
 h2 {
-  font-size: 3rem;
+  font-size: 3.1rem;
+}
+
+/*cambia tamaño h2 para movil*/
+@media(min-width: 768px){
+  h2 {
+    font-size: 3.5rem;
+  }
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2.4rem;
+}
+
+/*cambia tamaño h3 para movil*/
+@media(min-width: 768px){
+  h3 {
+    font-size: 3rem;
+  }
 }
 
 img {
@@ -92,8 +111,15 @@ img {
 
 .nav-principal {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem 0rem;
+}
+@media(min-width: 768px){
+  .nav-principal{
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 .nav-principal a:hover {
   color: #0e74e9;
@@ -107,10 +133,16 @@ img {
 .hero {
   margin-top: 3rem;
   background-image: url(images/principal.jpg); /*Coloca imagen de fondo*/
-  height: 45rem;
+  height: 25rem;
   background-repeat: no-repeat;
   background-position: center center; /*muestra la parte central de la imagen*/
   background-size: cover;
+}
+/*cambia altura de la imagen de fondo*/
+@media(min-width: 768px){
+  .hero{
+    height: 45rem;
+  }
 }
 /*Categorías
 .todas-categorias h2 {
@@ -118,7 +150,7 @@ img {
 }*/
 
 .todas-categorias {
-  padding-top: 5rem;
+  padding: 5rem 0;
 }
 .categoria a {
   display: block;
@@ -129,17 +161,33 @@ img {
   border-bottom-right-radius: 5rem;
   background-color: #eaeef0;
 }
+.categoria img{
+  width: 100%;
+}
 
+.categoria{
+  margin-bottom: 2rem;
+}
+@media(min-width: 768px){
+  .categoria{
+    margin-bottom: 0;
+  }
+}
 .categoria a:hover {
   background-color: #0d9ffb;
   color: #e6f0f7;
   border-bottom-right-radius: 5rem;
 }
-.listado-categorias {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+/*Modifica de tres a una columna para movil*/
+
+@media(min-width: 768px){
+  .listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
 }
+
 
 /**BLOQUE NOSOTROS*/
 /**Divide la sección nosotros en dos partes izquierda transparente y derecha azul y coloca imagen*/
