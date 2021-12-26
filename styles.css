@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; /*REM -> Medida RELATIVA que toma como referencia la medida que trae el HTML. Si la medida de la fuente de un párrafo heredada de HTML es 16px, un rem entonces mide eso, 16px. Tip: Para facilitar el uso de la medida REM, podemos darle a HTML un font-size de 62.5%. Así 1rem equivaldrá a 10px facilitando nuestros cálculos.*/
 }
+
 *,
 *:before,
 *:after {
@@ -16,6 +18,7 @@ body {
   line-height: 1.5; /*Interlineado Modifica distancia entre líneas*/
   font-size: 1.4rem;
 }
+
 a {
   text-decoration: none;
 }
@@ -27,32 +30,36 @@ h3 {
   font-weight: normal;
   margin: 0 0 5rem 0; /*Elimina todos los márgenes*/
 }
+
 h1 {
   font-size: 4rem;
 }
+
 /*cambia tamaño h1 para movil*/
-@media(min-width: 768px){
+@media (min-width: 768px) {
   h1 {
     font-size: 5rem;
   }
 
 }
+
 h2 {
   font-size: 3.1rem;
 }
 
 /*cambia tamaño h2 para movil*/
-@media(min-width: 768px){
+@media (min-width: 768px) {
   h2 {
     font-size: 3.5rem;
   }
 }
+
 h3 {
   font-size: 2.4rem;
 }
 
 /*cambia tamaño h3 para movil*/
-@media(min-width: 768px){
+@media (min-width: 768px) {
   h3 {
     font-size: 3rem;
   }
@@ -90,6 +97,7 @@ img {
 .max-width-25 {
   max-width: 25rem;
 }
+
 /*ESTILO HEADER*/
 
 .nombre-sitio {
@@ -100,6 +108,7 @@ img {
 .nombre-sitio span {
   color: #388dee;
 }
+
 .contenedor {
   max-width: 120rem;
   margin: 0 auto; /*para centrar*/
@@ -115,12 +124,14 @@ img {
   align-items: center;
   padding: 2rem 0rem;
 }
-@media(min-width: 768px){
-  .nav-principal{
+
+@media (min-width: 768px) {
+  .nav-principal {
     justify-content: space-between;
     flex-direction: row;
   }
 }
+
 .nav-principal a:hover {
   color: #0e74e9;
 }
@@ -138,12 +149,14 @@ img {
   background-position: center center; /*muestra la parte central de la imagen*/
   background-size: cover;
 }
+
 /*cambia altura de la imagen de fondo*/
-@media(min-width: 768px){
-  .hero{
+@media (min-width: 768px) {
+  .hero {
     height: 45rem;
   }
 }
+
 /*Categorías
 .todas-categorias h2 {
   text-align: center;
@@ -152,6 +165,7 @@ img {
 .todas-categorias {
   padding: 5rem 0;
 }
+
 .categoria a {
   display: block;
   text-align: center;
@@ -161,26 +175,30 @@ img {
   border-bottom-right-radius: 5rem;
   background-color: #eaeef0;
 }
-.categoria img{
+
+.categoria img {
   width: 100%;
 }
 
-.categoria{
+.categoria {
   margin-bottom: 2rem;
 }
-@media(min-width: 768px){
-  .categoria{
+
+@media (min-width: 768px) {
+  .categoria {
     margin-bottom: 0;
   }
 }
+
 .categoria a:hover {
   background-color: #0d9ffb;
   color: #e6f0f7;
   border-bottom-right-radius: 5rem;
 }
+
 /*Modifica de tres a una columna para movil*/
 
-@media(min-width: 768px){
+@media (min-width: 768px) {
   .listado-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -194,12 +212,12 @@ img {
 .sobre-nosotros {
   margin-top: 5rem;
   background-image: linear-gradient(
-      to right,
-      transparent 50%,
-      #0d9ffb 50%,
-      #0d9ffb 100%
-    ),
-    url(images/nosotros.jpg);
+          to right,
+          transparent 50%,
+          #0d9ffb 50%,
+          #0d9ffb 100%
+  ),
+  url(images/nosotros.jpg);
   padding: 10rem 0;
   background-position: left center;
   background-repeat: no-repeat;
@@ -210,10 +228,11 @@ img {
   display: flex;
   justify-content: flex-end;
 }
+
 .texto-nosotros {
   flex-basis: 50%;
   padding-left: 10rem;
-  color: #e6f0f7;
+  color: lightcyan;
 }
 
 /*LISTADO DE PRODUCTOS*/
@@ -224,6 +243,7 @@ img {
   column-gap: 2rem;
   row-gap: 2rem;
 }
+
 .producto:nth-child(1) {
   grid-column-start: 1;
   grid-column-end: 7;
@@ -231,11 +251,14 @@ img {
   grid-template-columns: 3fr 1fr;
 }
 
+}
+
 .producto:nth-child(1) img {
   height: 43rem;
   width: 100%;
   object-fit: cover;
 }
+
 .producto:nth-child(2) {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -257,10 +280,12 @@ img {
   width: 100%;
   object-fit: cover;
 }
+
 .producto:nth-child(4) {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
 .producto:nth-child(5) {
   grid-column-start: 3;
   grid-column-end: 5;
@@ -270,6 +295,7 @@ img {
   grid-column-start: 5;
   grid-column-end: 7;
 }
+
 .contenido-principal {
   padding-top: 5rem;
 }
@@ -324,6 +350,7 @@ img {
 .footer-menu a:hover {
   color: #0e74e9;
 }
+
 .copyright {
   margin-top: 5rem;
   text-align: center;
@@ -344,6 +371,7 @@ img {
   flex-direction: column;
   justify-content: center;
 }
+
 /*BLOG*/
 
 .contenedor-blog {
@@ -351,6 +379,7 @@ img {
   grid-template-columns: 2fr 1fr;
   column-gap: 4rem;
 }
+
 .entrada {
   border-bottom: 2px solid #35cdfb;
   padding-bottom: 4rem;
@@ -365,6 +394,7 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
 .entrada-meta p {
   font-weight: 600;
 }
@@ -377,6 +407,7 @@ img {
   width: 60rem;
   margin: 0 auto;
 }
+
 /*GALERÍA*/
 
 .galeria {
